@@ -1,0 +1,27 @@
+{
+    "name": "amund/noop",
+    "description": "Tiny PHP MVC framework",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "mikey179/vfsstream": "^1.6",
+        "phpunit/phpunit": "^11"
+    },
+    "bin": [
+        "bin/noop"
+    ],
+    "autoload": {
+        "files": [
+            "src/noop.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit test",
+        "watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "./test/watch.sh"
+        ]
+    }
+}

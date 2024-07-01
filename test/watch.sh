@@ -1,9 +1,7 @@
 #!/bin/sh
 
-EVENTS="close_write,moved_to,create"
-WATCH="../"
+# apt install inotify-tools
 
-inotifywait -mr --exclude '(\.git)' -e $EVENTS $WATCH |
-while read path events file; do
-	clear && phpunit
+while inotifywait -qre modify "$PWD/src" "$PWD/test"; do
+    clear && vendor/bin/phpunit
 done

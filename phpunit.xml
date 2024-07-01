@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+	colors="true"
+    displayDetailsOnTestsThatTriggerDeprecations="true"
+    displayDetailsOnTestsThatTriggerNotices="true"
+    displayDetailsOnTestsThatTriggerWarnings="true"
+    displayDetailsOnTestsThatTriggerErrors="true"
+    cacheDirectory="/tmp"
+	>
+
+    <testsuites>
+        <testsuite name="unit">
+        	<directory suffix="Test.php">test</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>
